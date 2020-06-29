@@ -19,6 +19,8 @@ app.use(cors());
 app.get('/', (req, res) => {
   res.send("Hello, world!");
 })
+require('./articles.js')(app);
+
 
 app.use(function errorHandler(error, req, res, next) {
   let response;
